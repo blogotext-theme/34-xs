@@ -1,0 +1,331 @@
+@charset "UTF-8";
+/* Blogotext 34 XS - Licensed under the CC0 1.0 license */
+
+/* GENERAL*/
+	html, body {
+		margin: 0; padding: 0; 
+		color: #222;  /* Couleur des textes */
+		background-color: #2d412d; /* Couleur d'arrière-plan */
+		font-family: "Liberation Sans", Helvetica, Calibri, sans-serif; /* Polices d'écriture */
+		word-wrap: break-word;
+	}
+	a:link {
+		color: #000078; /* Couleur des liens */
+		text-decoration: none; 
+		border-bottom: thin solid #000078; /* Soulignement des liens */
+	}
+	a:visited {
+		color: #780078; /* Couleur des liens visités */
+		text-decoration: none; 
+		border-bottom: thin solid #780078; /* Soulignement des liens visités */
+	}
+	a:hover, a:focus {
+		color: #000078; /* Couleur des liens survolés */
+		border-bottom: none; 
+		text-decoration: none; 
+		border-top: thin solid #000078; /* Surlignement des liens survolés */
+	}
+
+	#email-adress {display: none !important;} /* champ antispam, seuls les robots doivent le voir */
+/* LAYOUT*/
+	#top {background-color: white; /* Couleur de fond du header */
+		/* background-image: url(); background-repeat: no-repeat; background-attachment: scroll; background-position: 1em 50%; *//* Image-médaillon du header */
+		border: medium solid #2d412d; /* Type de bordure */
+		padding: 2em 0; 
+		text-align: center;
+	}
+	#top h1 {
+		font-size: 2em; /* Taille du titre du blog */
+		font-family: "DejaVu Sans Light", "Copperplate Gothic Light", "Century Gothic", sans-serif; /* Polices du titre du blog */
+		margin-top: 0; margin-bottom: 1em;
+		}
+	#top h1 a:link, #top h1 a:visited {
+		color: #222; /* Couleur du titre du blog */
+		border-bottom: thin solid #222; /* Soulignement du titre du blog */
+	}
+	#top h1 a:hover, #top h1 a:focus {
+		color: #222; /* Couleur du titre du blog survolé */
+		border-bottom: none; 
+		border-top: thin solid #222; /* Surlignement du titre du blog survolé */
+	}
+	#top h2 {font-size: 1.5em;} /* Sous-titre du blog */
+	#top-links {position: absolute; 
+		top: 2em; right: 10%; /* Position des liens du header par rapport au haut et à la droite du header */
+		font-size: 90%; list-style-type: none; margin: 0;
+	}
+	#top-links a {
+		display: block; 
+		padding: 0.5ex; margin: 1ex;  /* Taille et écartement des liens du header */
+		background-color: #dedede; /* Couleur de fond des liens du header */
+		border: thin solid black; 
+		text-decoration: underline;
+	}
+	#top-links a:hover, #top-links a:focus {
+	background-color: white; /* Couleur de fond des liens du header survolés */
+	text-decoration: overline;
+	}
+	#page {
+		width: 80%; /* Largeur de la page */
+		margin: 1ex auto 0; 
+		padding: 1em; 
+		border: thin solid black;
+		background-color: white; /* Couleur de fond de la page */
+	}
+	#contenu {
+		display: block; 
+		width: 66%; /* Largeur du contenu de texte */
+	}
+	#sidebar {
+		display: block; 
+		float: right; 
+		width: 25%; /* Largeur du menu latéral */
+		margin-top: 2em; 
+		padding: 1em; 
+		border: thin solid black; 
+		background-color: palegoldenrod; /* Couleur de fond du menu latéral */
+	}
+	#sidebar h2 {padding-bottom: 0.5ex; border-bottom: thin dotted #222;} /* Titres de section du menu latéral */
+	#sidebar table {margin-bottom: 2em;}
+	#sidebar ul {padding: 0; text-align: justify;}
+	#sidebar li {display: inline-block; list-style-type: none; margin: 1em 0.5ex; line-height: 3ex;}
+	#search {margin-top: 1em;}
+	#search legend {font-weight: bold; font-size: 120%;}
+
+/* POST*/
+	h1 {font-size: 2em;} /* Titre des articles */
+
+/* POST BLOCS*/
+	.news {
+		font-family: Georgia, "Palatino Linotype", "DejaVu Serif", serif; /* Polices des articles */
+		font-variant-ligatures: normal; 
+		padding-left: 1em; margin-bottom: 1em;
+		border-bottom: medium solid #2d412d; 
+		line-height: 1.5em;
+		background-color: white; /* Couleur de fond des articles */
+	}
+	.news h1 {
+		color: #333; /* Couleur des titres des articles */
+		font-variant: small-caps; 
+		font-family: "URW Bookman L", Garamond, "DejaVu Serif", serif; /* Polices des titres des articles */
+		line-height: 1.2em; /* Hauteur de ligne des titres des articles */
+	}
+	.news h2 {
+		color: #333; /* Couleur des titres hiveau 2 des articles */
+		width: 80%; 
+		border-bottom: thin dotted #222; 
+		font-family: "DejaVu Sans Mono", monospace; /* Polices des titres niveau 2 des articles */
+		line-height: 1.5em; /* Hauteur de ligne des titres niveau 2 des articles */
+	}
+	.news h3 {
+		color: #333; /* Couleur des titres hiveau 3 des articles */
+		font-family: "DejaVu Sans Mono", monospace; /* Polices des titres niveau 3 des articles */
+	}
+	.news p, .news ul {
+		color: #333; /* Couleur des paragraphes des articles */
+		line-height: 2em;  /* Hauteur de ligne des articles */
+	}
+	.news a:hover, .news a:focus {color: red; border-top: thin solid red;} /* Couleur et bordure des liens des articles survolés */
+	p.chapo {
+		color: #222; /* Couleur de texte du chapeau */
+		background-color: palegoldenrod; /* Couleur de fond du chapeau */
+		font-weight: bold; /* Épaisseur de texte du chapeau */
+		font-family: "Liberation Sans", Helvetica, Calibri, sans-serif; /* Polices de texte du chapeau */
+		padding: 1ex; 
+		border: thin solid black;
+	}
+	p.tags {
+		font-family: "Liberation Sans", Helvetica, Calibri, sans-serif; /* Polices de texte des tags */
+		text-align: right; /* Alignement des tags */
+	}
+	pre {line-height: 1.5em;}
+	code {color: #333; font-family: "DejaVu Sans Mono", monospace;} /* Code */
+	figcaption {color: maroon; font-family: "DejaVu Sans Mono", monospace;} /* Détail des illustrations */
+	kbd {border: thin solid #333; padding: 0.5ex;} /* Touches */
+	blockquote p::before {content: "\201C\00A0"; font-size: 2em;} /* "« " */
+	blockquote p::after {content: "\00A0\201D"; font-size: 2em;} /* " »" */
+	.news table {color: #333; margin: 1em 0;} /* Tableau */
+	.news th {padding-right: 1em;}
+
+/* COMMENT BLOCS*/
+	.comment {
+		color: #222; /* Couleur de texte des commentaires */
+		background-color: palegoldenrod; /* Couleur de fond des commentaires */
+		border: thin dashed black; 
+		padding: 1ex; margin-bottom: 1ex;
+	}
+	.comment h3 {margin-top: 0;}
+	#rss-comment {margin: 1em 0;}
+
+/* FORM COMMENT*/
+	#postcom {
+		padding: 1em; 
+		background-color: white; /* Couleur de fond du formulaire de commentaires */
+		border-top: thin solid black;}
+	#postcom p {margin: 0;}
+	#postcom label {margin-top: 0.5ex;}
+	textarea.commentaire {width: 100%; padding:0 2px;}
+	.infos input, textarea.commentaire {border: thin solid black;}
+	.formatbut input, .infos input {display: inline; min-width: 3em;}
+	.formatbut .pm {float: right;}
+	.formatbut input[value="B"] {font-weight: bold;}
+	.formatbut input[value="I"] {font-style: italic;}
+	.formatbut input[value="U"] {text-decoration: underline;}
+	.formatbut input[value="S"] {text-decoration: line-through;}
+	#form-commentaire fieldset {border: none; margin: 0; padding: 0;}
+	#form-commentaire .infos {text-align: right; line-height: 2em; margin: 1em auto;}
+	#form-commentaire .buttons {margin: 1ex 0; text-align: left;}
+
+	/* Boutons de formatage  */
+	p.formatbut {
+		border: thin solid black;
+		border-bottom: 0;
+		border-radius: 5px 5px 0 0;
+		width: 100%;
+		height: 30px;
+		line-height: 28px;
+		margin: 0; padding: 0 2px;
+		background: #cde6ff;
+		background: -webkit-linear-gradient(top, white, #e6e6e6);
+		background: -moz-linear-gradient(top, white, #e6e6e6);
+		background: -ms-linear-gradient(top, white, #e6e6e6);
+		background: -o-linear-gradient(top, white, #e6e6e6);
+		background: linear-gradient(top, white, #e6e6e6);
+	}
+
+	.formatbut button.pm {
+		margin-top: 3px;
+	}
+
+	.formatbut button {
+		padding: 0;
+		vertical-align: middle;
+		background: rgba(0, 0, 0, 0);
+		height: 24px; width: 24px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+	}
+
+	.formatbut button:hover {
+		border-color: silver;
+	}
+
+	.formatbut button:active {
+		border-color: gray;
+		background-color: rgba(0, 0, 0, 0);
+		background: #cde6ff;
+		background: -webkit-linear-gradient(bottom, white, #d6d6d6);
+		background: -moz-linear-gradient(bottom, white, #d6d6d6);
+		background: -ms-linear-gradient(bottom, white, #d6d6d6);
+		background: -o-linear-gradient(bottom, white, #d6d6d6);
+		background: linear-gradient(bottom, white, #d6d6d6);
+	}
+
+	.formatbut button span {
+		display: inline-block;
+		width: 16px;
+		height: 24px;
+	}
+
+	.formatbut span.spacer {
+		width: 2px;
+		margin: 0 4px;
+		border-left: 1px solid #e5e5e5;
+		border-right: 1px solid #fafafa
+	}
+
+
+
+	#pmm span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wDCxAJLii7ntMAAADSUExURQAAAOjo6P///7Ozs8HBwc7Ozt7e3paWlrCwsLS0tNLS0goKChwcHCUlJScnJyoqKi4uLjAwMDExMVhYWFxcXF9fX2BgYGRkZGZmZmlpaWpqam1tbXBwcHNzc3l5eXp6en19fX5+fouLi5KSkqmpqaurq66urr+/v8jIyMrKys/Pz9nZ2dvb29zc3N7e3t/f3+Dg4OHh4eLi4ubm5ufn5+np6erq6uvr6+/v7/Hx8fPz8/X19fb29vf39/j4+Pn5+fr6+vv7+/z8/P39/f7+/v///10CZUMAAAALdFJOUwAPD5CQkJDo6OjoP846XAAAAAFiS0dEPKdqYc8AAACXSURBVBgZXcExCsJAEEDRP7MTEWOjrZKAhXj/Q3gMISIKKlgJYmZ3ZaM2eQ9GBDVrM4V07kmoNg1/x0OvhIbkg0QTCLSLV0yDGC0+DMcFsaBCJGK8qQV4Rn/llWP0yF6leG+zY2T6ZUXhKglDue/4uiEYFXpNFKoYxoRp5kuZoFyoLQxsxhnDu3bOT+cIEqp1ppBTHzNjH7zvQDVxVU2JAAAAAElFTkSuQmCC"); }
+	#pmp span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wDCxAJKbbfC3AAAADkUExURQAAAOjo6P///7Ozs8HBwc7Ozt7e3paWlrCwsLS0tNLS0goKChwcHCUlJTExMTg4ODs7O0JCQkNDQ0VFRU1NTU5OTlFRUVJSUlVVVVhYWFxcXF9fX2BgYGRkZGZmZmlpaWpqam1tbW5ubnBwcHNzc3l5eXp6en19fX5+fouLi5KSkqKioqmpqaurq66urr+/v8jIyMrKys/Pz9nZ2dvb29zc3N7e3t/f3+Dg4OHh4eLi4ubm5ufn5+np6erq6uvr6+/v7/Hx8fPz8/b29vf39/j4+Pr6+vv7+/z8/P39/f7+/v///0tL/g0AAAALdFJOUwAPD5CQkJDo6OjoP846XAAAAAFiS0dEQ2fQDWIAAACuSURBVBgZBcExSwMxGADQly+5Xh1FFAsdpAgFB///6GYnR0FwswgVFQcH28slvgcAIIlSth2kl1pbMtytAeyfp5DXWoXarLOwcZxmu515OtkoqjkRyWg2K47OEpH8/PVVVUzSQ+TRY233fVJ002qIg1WrkZoifG95d8OXpBjEZ7tqfEQoitGyc8FSGGW/m9yT68tTz2M8zZnxfFhk8mKIt0NPUh5uO0iv09wBAPwD49RAJmqvBOwAAAAASUVORK5CYII="); }
+
+	#button01 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALxJREFUeNpi/P//PwMlgImBQjDwBrDATWICm6UNxI041L4G4nogfgXi/Pv3D6sLrgLxNCBmhuIGIA4B4jVALAHETjhdgATeADErmheZoGJMxBjAiGRANxYXEgxEkAFsUNwPxOVAvAzKrwBiLkIGMCEZAAqwC0B8GcqXA2INrF4ApUhGRpDlDDJAzA4zDCqOLPYJxbmwpAxUxAmkrIB4Hp5onw/EM4H4G1DfR2wG8CAFIC7wH6sBQzcvAAQYAFMGMSibVtAlAAAAAElFTkSuQmCC"); }
+	#button02 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJlJREFUeNpi/P//PwMlgImBQjDwBrBgmMgEN1MbiBvRpOv//ft3FUUEFIjImJGRERnrAPF6IO6BiaGrZyLCi6xAvJDcMLAA4j9AfJlcA/yBeCe5sWAExAJAfAI5vAjGAiwggaAIiNmBfGa8bkQPVSCwBeKHaNgdiMWhBqLGGrqzgLZzAyk+EBPNrr9A/AGo/ieK+qGfmQACDABdr1fBOdq53gAAAABJRU5ErkJggg=="); }
+	#button03 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAALRJREFUeNpi/P//PwMlgImBQkCxASwopjExhQGpMCSheijdiCz279+/q3AeKAxgmJGREYSdgHgdlIaJ6SCLIevB5oXXUJe9RhK7gkUMZxgwAjEzlEYG2MRwGsCKRTErKQawYFHMQqwBn6G2qSCJGULFPmPYhpwSgdEIY6YCcTKa2rlAPBvEAEYjdgNAUYRMowOYWmQ9LGhq+IH4KoH8oQPEH3AZAAJGOMRB4C/eMBiQzAQQYABWeD2iSgCteAAAAABJRU5ErkJggg=="); }
+	#button04 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANpJREFUeNpi/P//PwMlgImBQkCxASwopjHBzbMB4nQg5oTyrwKxNhAXAfGjf//+EXRBFhC/BOI0KAapYwZpxusCJPASquEdlD8FiHWwKWREjgUkL4gDcQ0QfwfiXqiBcIDsBXQD9hATcEADXOAckAEwzMjIiI4lgHgiEM8GYkmYOLIeXAZ4I2sA4vlQjGEASiDCDAGCFiA+B+RXgP3JyMgBpORgavDFAidQASi0RYBYEmQIVNNXINUDxEJA/AmI/2ANRKBNoITDB41CbOAHyACgHuwGDM3MBBBgANhbZ2CYxiPdAAAAAElFTkSuQmCC"); }
+
+	#button09 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAe1BMVEUAAAACAwP///////////8LDRD///8NDxIXGR8OERQXGSAZGyIaHCMcHiYZHCD///////+tsbuFipKXnKh/hI0WGh8nKjU6QE9rcopCSlgXGiAkKTImLDUoKzcoLjg3QE05QlA6QFA/RldBRlhBSVpESl1OV2xZYHpcZH4A/W7TAAAAGnRSTlMAEENPWmBlcHCAgICQkJWds9DU2d7w8PX2+1wQp8QAAABoSURBVBgZtcEJEoIwEATAUeN6gS6w3kYGXWL+/0IrPMEqu4E/qWM87bCOscakGnP+vLeLSx4rFENqtEtnHLo0oHCfI/gLCO4oyCVw5QYrEoXxfpy1fN4eNBRi7PfBSJpgIqoCUVXBT76HeQdQXXlI0wAAAABJRU5ErkJggg=="); }
+	#button10 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKFJREFUeNpi/P//PwMlgImBQjAMDGAABSIIMzMzw7AEEO8F4ngcfLgeEMbmgnggfgnEC3HwCXrBG4h3I0UvnA/C//79Q1HMCFMIchoUnIDS54A4C52PbggLjAESZGICO4gdKmQJpVH46AkP2QvMQEP4gfRaIOYF4nVAvhSIRuILIluK4gVGRkaQH3iAmAvExRFp34H4M1DPHwwDRnBSBggwAOBZUhm1ZXdkAAAAAElFTkSuQmCC"); }
+	#button12 span { background: no-repeat 0 3px url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAANZJREFUeNrUk70KwjAUhRMpgoK6NZa+hE8jpbiUDr6GvkRBcOjq4tjJ3ScSQYV4IseSxoYOmQx8tPfv9N5wK7XWIuSMROAJFhBmBCmlyxpUll3R18n7jN8jkIEDiC1fTF82JJCDI1A9XSnGcp/ABtSeYlukZm5HYAUufIoB2ly3gwKcQGJs9zAnYU7hu4MSnE1ij0DCWPlzB85XtqCBmVr1qfEx1lkBWyACM6DAHlzBHCz4vgNL2lG7Q98R6JyAKTf0CR6mMcbGpgbcwQ28WoH//pneAgwAE6VdVO+LqWsAAAAASUVORK5CYII="); }
+
+/* CALENDAR*/
+	#calendrier {display: block; border: thin solid black;}
+	#calendrier caption {
+		background-color: #f8f8ff; /* Couleur de fond du mois du calendrier */
+		color: black;  /* Couleur de texte du mois du calendrier */
+		padding: 1ex;
+	}
+	#calendrier caption a {
+		color: #000078; /* Couleur des liens du calendrier */
+		font-weight: bold; 
+		text-decoration: none;
+	}
+	#calendrier td {
+		font-size: 0.8em; 
+		color: black; /* Couleur du numéro des jours */
+		text-align: center; 
+		background-color: #f8f8ff; /* Couleur de fond des jours */
+		width: 1%; /* corrige bug de largeur */
+		line-height: 2em;
+	}
+	#calendrier td a {
+		display: block; 
+		text-decoration: none; 
+		background-color: #0a1946; /* Couleur de fond des jours-liens */
+		color: white; /* Couleur du numéro des jours-liens */
+		font-weight: bold;
+	}
+	#calendrier td a:hover {
+		background-color: white; /* Couleur de fond des jours-liens survolés */
+		color: #0a1946; /* Couleur du numéro des jours-liens survolés */
+	}
+	#calendrier td.active a {
+		background-color: #8c0000; /* Couleur de fond des jours-liens actifs */
+		color: white; /* Couleur du numéro des jours-liens actifs */
+	}
+
+/* OTHERS*/
+	#footer {
+		color: white; /* Couleur de texte du footer */
+		/* Couleur de fond = couleur d'arrière-plan du body */
+		text-align: center; /* Alignement du texte du footer */
+		line-height: 3ex; /* Hauteur de ligne du footer */
+	}
+	#footer a:link, #footer a:visited {color: white; border-bottom: thin solid white;} /* Couleur et bordure des liens du footer */
+	#footer a:hover, #footer a:focus {color: white; border-bottom: none; border-top: thin solid white;} /* Couleur et bordure des liens du footer survolés */
+
+
+/* CSS POUR DEVICES DE MOINS DE 832 PX */
+@media screen and (max-width: 832px) {
+	.media-hidden {display: none;}
+
+/* LAYOUT */
+	#top {padding: 1ex; text-align: right;}
+	#top h1 {margin-bottom: 0;}
+	#top-links {position: static;}
+	#top-links li {display: inline-block;}
+	#top-links a {padding: 1ex;}
+	#page {width: 90%} /* Largeur de page */
+	#contenu {width: 90%;} /* Largeur de contenu */
+	#sidebar {
+		float: none; 
+		position: relative; 
+		width: 96%; /* Largeur de la sidebar (en position header) */
+		margin: 1ex auto; padding-top: 0;
+	}
+	div[role="search"] {width: 100%;} /* Largeur du formulaire de recherche */
+
+}
+
+
+/* CSS POUR IMPRESSION D'UN ARTICLE SÉLECTIONNÉ */
+@media print {
+	header, footer, hr, .chapo, .comment,
+	#rss-comment, #commentaires, #postcom {display: none;} /* Non imprimé */
+	#page {
+		width: 100%; font-size: 90%;
+		border: none; margin: 0; padding: 0;
+	}
+	#contenu {width: 90%;}
+	.news {border: none; margin: 0; padding: 0;}
+
+}

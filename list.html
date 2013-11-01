@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>{article_titre_page}{blog_nom}</title>
+		<meta name="robots" content="all" />
+		<meta name="description" content="{blog_description}" />
+		<meta name="generator" content="BlogoText" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/jpg" href="/favicon.jpg" />
+		<link type="text/css" rel="stylesheet" href="{style}/style.css" />
+		<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
+		<style type="text/css">
+		#email-adress { display: none!important; }
+		</style>
+	</head>
+
+	<body>
+	<div id="page">
+
+		<header role="banner" id="top">
+			<hgroup>
+				<h1><a rel="home" hreflang="fr" href="{racine_du_site}">{blog_nom}</a></h1>
+				<h2>{blog_description}</h2>
+			</hgroup>
+			<ul id="top-links"><!-- Vous pouvez supprimer cette section -->
+				<li><a href="#">lien 1</a></li>
+				<li><a href="#">lien 2</a></li>
+				<li><a href="#">lien 3</a></li>
+			</ul><!-- Fin section supprimable -->
+		</header>
+
+		<aside id="sidebar">
+			<!-- champ de recherche -->
+			<div role="search">
+				<form action="/index.php" method="get" id="search">
+				<fieldset>
+					<legend>Recherche</legend>
+					<label for="q">Entrez votre requête :</label>
+						<input id="q" name="q" size="25" type="search" />
+						<input id="input-rechercher" value="Recherchez !" type="submit" />
+				</fieldset>
+				</form>
+			</div>
+			<div class="media-hidden">
+				<!-- calendrier -->
+				<nav role="navigation">
+					<h2>Calendrier</h2>
+					{calendrier}
+				</nav>
+				<hr/>
+
+				<h2>Derniers commentaires</h2>
+				{commentaires_encart}
+				<hr/>
+				<h2>Tags</h2>
+				{categories_encart}
+			</div>
+		</aside> <!-- fin #sidebar -->
+
+		<section role="main" id="contenu">
+
+			{BOUCLE_posts}
+			{/BOUCLE_posts}
+	
+		</section> <!-- fin #contenu -->
+
+	</div> <!-- fin #page -->
+
+	<footer role="contentinfo" id="footer">
+		<p>&copy; {blog_nom} - Publié sous licence <a rel="license" hreflang="fr" href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr">CC-by-sa 3.0</a>.
+			<br />Publié avec <a hreflang="fr" href="http://lehollandaisvolant.net/blogotext/">BlogoText {version}</a> - <a hreflang="fr" href="http://renoult-jonathan.tilde3.eu/mes-scripts/blogotext-34-xs.htm">version XS</a>
+		</p>
+	</footer>
+
+	<script type="text/javascript">
+/* Tag script found at : http://www.siteduzero.com/tutoriel-3-34703-insertion-de-balises-dans-une-zone-de-texte.html */
+function insertTag(startTag, endTag, tag, tagType) {
+	var field = document.getElementById(tag);
+	var scroll = field.scrollTop;
+	field.focus();
+
+	if (window.ActiveXObject) { // C'est IE
+		var textRange = document.selection.createRange();            
+		var currentSelection = textRange.text;
+
+		textRange.text = startTag + currentSelection + endTag;
+		textRange.moveStart("character", -endTag.length - currentSelection.length);
+		textRange.moveEnd("character", -endTag.length);
+		textRange.select();     
+	} else { // c'est pas IE.
+		var startSelection   = field.value.substring(0, field.selectionStart);
+		var currentSelection = field.value.substring(field.selectionStart, field.selectionEnd);
+		var endSelection     = field.value.substring(field.selectionEnd);
+		if (currentSelection == "") { currentSelection = "TEXTE"; }
+		field.value = startSelection + startTag + currentSelection + endTag + endSelection;
+		field.focus();
+		field.setSelectionRange(startSelection.length + startTag.length, startSelection.length + startTag.length + currentSelection.length);
+	}
+	field.scrollTop = scroll;
+}
+
+function reply(code) {
+	var field = document.getElementById('form-commentaire').getElementsByTagName('textarea')[0];
+	field.focus();
+	if (field.value !== '') {
+		field.value += '\n\n';
+	}
+	field.value += code;
+	field.scrollTop = 10000;
+	field.focus();
+}
+
+function resize(id, dht) {
+	var elem = document.getElementById(id);
+	var ht = elem.offsetHeight;
+	size = Number(ht)+Number(dht);
+	elem.style.height = size+"px";
+	return false;
+}
+	</script>
+	</body>
+</html>

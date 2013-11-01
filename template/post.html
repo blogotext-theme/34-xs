@@ -1,0 +1,28 @@
+<article role="article" class="news">
+	<header>
+		<h1 title="{article_chapo}" class="{article_tags_plain}">{article_titre}</h1>
+		<p class="date">{article_date} à {article_heure}</p>
+		<p class="chapo">{article_chapo}</p>
+	</header>
+	<section class="contenu">
+		{article_contenu}
+	</section>
+	<footer>
+		<p class="tags">Dans les catégories : {article_tags}</p>
+	</footer>
+</article>
+
+<section>
+	<h2 id="commentaires">{nombre_commentaires}</h2>
+	{BOUCLE_commentaires}
+	<article role="article" class="comment" id="{commentaire_ancre}">
+		<h3><a href="#{commentaire_lien}">#</a> - <a href="#form-commentaire" onclick="reply('[b]@[{commentaire_auteur}|#{commentaire_ancre}] :[/b] ');">@</a> - {commentaire_auteur_lien} - {commentaire_date} à {commentaire_heure}</h3>
+		{commentaire_contenu}
+	</article>
+	{/BOUCLE_commentaires}
+
+	<aside id="rss-comment"><a href="{rss_comments}">Flux RSS des commentaires de cet article</a></aside>
+	<div id="postcom">
+		{formulaire_commentaire}
+	</div>
+</section>
