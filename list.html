@@ -3,16 +3,21 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title>{article_titre_page}{blog_nom}</title>
+		<meta name="viewport" content="width=device-width" />
 		<meta name="robots" content="all" />
 		<meta name="description" content="{blog_description}" />
 		<meta name="generator" content="BlogoText" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/jpg" href="/favicon.jpg" />
+		<meta name="author" content="{blog_auteur}" />
+		<link rel="icon" type="image/png" href="{style}/images/favicon.png" />
+		<link rel="apple-touch-icon" href="{style}/images/apple-touch-icon.png">
+		<link rel="canonical" href="{racine_du_site}" />
+		<link rel="image_src" href="{style}/images/apple-touch-icon.png" />
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="{style}/images/apple-touch-icon.png">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 		<link type="text/css" rel="stylesheet" href="{style}/style.css" />
 		<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
-		<style type="text/css">
-		#email-adress { display: none!important; }
-		</style>
 	</head>
 
 	<body>
@@ -53,8 +58,19 @@
 				<h2>Derniers commentaires</h2>
 				{commentaires_encart}
 				<hr/>
+				
 				<h2>Tags</h2>
 				{categories_encart}
+				<hr/>
+
+				<h2>Autres</h2>
+				<ul>
+					<li><a href="index.php" title="">Blog</a></li>
+					<li><a href="index.php?mode=links" title="">Liens</a></li>
+					<li><a href="index.php?mode=comments" title="">Derniers commentaires</a></li>
+				</ul>
+				<hr/>
+			</nav>
 			</div>
 		</aside> <!-- fin #sidebar -->
 
