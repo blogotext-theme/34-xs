@@ -38,6 +38,6 @@ Blogotext 34 XS est diffusé sous [licence CC0 1.0][licence-blogotext-xs].
 
 <!-- LIENS -->
 [blogotext-34]: <http://lehollandaisvolant.net/blogotext/V1/>
-[blogotext-34-xs]: <https://github.com/blogotext-theme/34-xs/archive/master>
+[blogotext-34-xs]: <https://github.com/blogotext-theme/34-xs/archive/master.zip>
 [licence-blogotext-xs]: <https://creativecommons.org/publicdomain/zero/1.0/deed.fr>
 [dl-7zip]: <http://www.7-zip.org> "Télécharger le logiciel 7zip"
