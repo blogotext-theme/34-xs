@@ -7,6 +7,12 @@ Elle est valide html5 et css3 selon le validateur du w3c.
 
 La feuille de style est de niveau AAA pour l'accessibilité des couleurs. Elle s'adapte aux petits devices et à l'impression.
 
+---
+
+![alt tag](http://www.xoofoo.org/uploads/thm_blogotext/34-xs.png)
+
+---
+
 ## INSTALLATION
 
 0.	Téléchargez l'archive [blogotext-34-xs.zip][blogotext-34-xs] ([7zip][dl-7zip] - 5.2 Kio).
@@ -35,6 +41,9 @@ Blogotext 34 XS est diffusé sous [licence CC0 1.0][licence-blogotext-xs].
 	are permitted in any medium without royalty provided the copyright
 	notice and this notice are preserved.  This file is offered as-is,
 	without any warranty.
+	
+## BUGS
+  * S'il vous plaît, reportez tout dysfonctionnement ou ajout de fonctionnalité sur https://github.com/blogotext-theme/34-xs/issues - Et aidez nous à améliorer ce thème.
 
 <!-- LIENS -->
 [blogotext-34]: <http://lehollandaisvolant.net/blogotext/V1/>
